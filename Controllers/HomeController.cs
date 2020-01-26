@@ -15,7 +15,7 @@ namespace jg739415MIS4200.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "My MIS 4200 Test Description";
 
             return View();
         }
