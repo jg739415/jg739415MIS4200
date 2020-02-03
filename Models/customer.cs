@@ -13,6 +13,9 @@ namespace jg739415MIS4200.Models
 		public string email { get; set; }
 		public string phone { get; set; }
 		public DateTime customerSince { get; set; }
+		public string fullName { 
+			get { return customerLastName + ", " + customerFirstName; }
+				}
 
 	}
 }
