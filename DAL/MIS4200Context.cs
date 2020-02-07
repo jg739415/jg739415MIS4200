@@ -12,7 +12,7 @@ namespace jg739415MIS4200.DAL
     {
         public MIS4200Context() : base("name=DefaultConnection")
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MIS4200Context, jg739415MIS4200.Migrations.MISContext.Configuration>("DefaultConnection");
+         //   Database.SetInitializer(new MigrateDatabaseToLatestVersion<MIS4200Context, jg739415MIS4200.Migrations.MISContext.Configuration>("DefaultConnection");
         }
 
         public DbSet<customer> Customers { get; set; }
