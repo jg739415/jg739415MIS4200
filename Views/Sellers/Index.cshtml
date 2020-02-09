@@ -1,0 +1,45 @@
+﻿@model IEnumerable<jg739415MIS4200.Models.Seller>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sellerFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sellerLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employeeSince)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sellerFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sellerLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employeeSince)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.sellerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.sellerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.sellerId })
+        </td>
+    </tr>
+}
+
+</table>

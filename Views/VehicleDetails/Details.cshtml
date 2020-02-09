@@ -1,0 +1,58 @@
+﻿@model jg739415MIS4200.Models.VehicleDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VehicleDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.sellerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seller.sellerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vehicleID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vehicleID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.vehicleDetailsID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

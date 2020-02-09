@@ -1,0 +1,42 @@
+﻿@model jg739415MIS4200.Models.Seller
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sellerFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sellerFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sellerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sellerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeSince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeSince)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sellerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<jg739415MIS4200.Models.VehicleDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Seller.sellerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vehicleID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seller.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vehicleID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.vehicleDetailsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vehicleDetailsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vehicleDetailsID })
+        </td>
+    </tr>
+}
+
+</table>
