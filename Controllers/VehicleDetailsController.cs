@@ -40,7 +40,7 @@ namespace jg739415MIS4200.Controllers
         // GET: VehicleDetails/Create
         public ActionResult Create()
         {
-            ViewBag.sellerID = new SelectList(db.Sellers, "sellerId", "firstName");
+            ViewBag.sellerID = new SelectList(db.Sellers, "sellerID", "sellerName");
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace jg739415MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.sellerID = new SelectList(db.Sellers, "sellerId", "firstName", vehicleDetails.sellerID);
+            ViewBag.sellerID = new SelectList(db.Sellers, "sellerId", "sellerName", vehicleDetails.sellerID);
             return View(vehicleDetails);
         }
 
@@ -74,7 +74,7 @@ namespace jg739415MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.sellerID = new SelectList(db.Sellers, "sellerId", "firstName", vehicleDetails.sellerID);
+            ViewBag.sellerID = new SelectList(db.Sellers, "sellerId", "sellerName", vehicleDetails.sellerID);
             return View(vehicleDetails);
         }
 
@@ -91,7 +91,7 @@ namespace jg739415MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.sellerID = new SelectList(db.Sellers, "sellerId", "firstName", vehicleDetails.sellerID);
+            ViewBag.sellerID = new SelectList(db.Sellers, "sellerId", "sellerName", vehicleDetails.sellerID);
             return View(vehicleDetails);
         }
 
