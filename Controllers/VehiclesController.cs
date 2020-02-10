@@ -74,7 +74,7 @@ namespace jg739415MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ownerId = new SelectList(db.Owners, "ownerId", "firstName", vehicle.ownerId);
+            ViewBag.ownerId = new SelectList(db.Owners, "ownerId", "ownerName", vehicle.ownerId);
             return View(vehicle);
         }
 
@@ -91,7 +91,7 @@ namespace jg739415MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ownerId = new SelectList(db.Owners, "ownerId", "firstName", vehicle.ownerId);
+            ViewBag.ownerId = new SelectList(db.Owners, "ownerId", "ownerName", vehicle.ownerId);
             return View(vehicle);
         }
 
