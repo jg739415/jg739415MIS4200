@@ -47,7 +47,7 @@ namespace jg739415MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "sellerId,firstName,lastName,employeeSince")] Seller seller)
+        public ActionResult Create([Bind(Include = "sellerId,sellerFirstName,sellerLastName,employeeSince")] Seller seller)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace jg739415MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "sellerId,firstName,lastName,employeeSince")] Seller seller)
+        public ActionResult Edit([Bind(Include = "sellerId,sellerFirstName,sellerLastName,employeeSince")] Seller seller)
         {
             if (ModelState.IsValid)
             {

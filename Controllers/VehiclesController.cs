@@ -40,7 +40,7 @@ namespace jg739415MIS4200.Controllers
         // GET: Vehicles/Create
         public ActionResult Create()
         {
-            ViewBag.ownerId = new SelectList(db.Owners, "ownerId", "firstName");
+            ViewBag.ownerId = new SelectList(db.Owners, "ownerId", "ownerName");
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace jg739415MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ownerId = new SelectList(db.Owners, "ownerId", "firstName", vehicle.ownerId);
+            ViewBag.ownerId = new SelectList(db.Owners, "ownerId", "ownerName", vehicle.ownerId);
             return View(vehicle);
         }
 

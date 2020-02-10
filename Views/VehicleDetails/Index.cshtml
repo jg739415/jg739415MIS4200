@@ -23,9 +23,9 @@
         <th>
             @Html.DisplayNameFor(model => model.year)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.vehicleID)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
@@ -43,9 +43,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.year)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.vehicleID)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.vehicleDetailsID }) |
             @Html.ActionLink("Details", "Details", new { id=item.vehicleDetailsID }) |

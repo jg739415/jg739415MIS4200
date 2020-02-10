@@ -14,10 +14,10 @@ namespace jg739415MIS4200.Models
         public string phone { get; set; }
         public DateTime ownerSince { get; set; }
 
-        //public string ownerName
-        //{
-        //    get { return ownerLastName + ", " + ownerFirstName; }
-        //}
+        public string ownerName
+        {
+            get { return ownerLastName + ", " + ownerFirstName; }
+        }
 
     }
 }
