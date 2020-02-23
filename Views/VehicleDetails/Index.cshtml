@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<jg739415MIS4200.Models.VehicleDetails>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Vehicle Details";
 }
 
-<h2>Index</h2>
+<h2>Vehicle Details</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-default" })
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Seller.sellerName)

@@ -2,38 +2,40 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Jessica Gregory</h1>
+<div class = "jumbotron" style = "background-color:steelblue">
+
+    <h1 style="color:lightgrey;">Jessica Gregory</h1>
     <p class="lead">MIS 4200 is learning about system development and having the experience to work on an information system consulting project using live clients</p>
     <p><a href="https://ohiocoblms.azurewebsites.net/learn/forumMainPage.aspx?f=8343" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Ohio University</h2>
+    <div class="well well-sm">
+        <h2>Software Development</h2>
+        @*<p>More about MVC</p>*@
+        @Html.ActionLink("Vehicle", "Index", "Vehicles", null, new { @class = "btn btn-default" })
+        @Html.ActionLink("Owner", "Index", "Owners", null, new { @class = "btn btn-default" })<br />
+        @Html.ActionLink("Vehicle Details", "Index", "VehicleDetails", null, new { @class = "btn btn-default" })
+        @Html.ActionLink("Seller", "Index", "Sellers", null, new { @class = "btn btn-default" })<br />
+
+    </div>
+    <div class="well well-sm">
+            <h2><span class="glyphicon glyphicon-apple"></span> Ohio University</h2>
         <p>
             I am currently a senior at Ohio University graduating at the end of the semester. OU is a great school with so many opportunities for all students. 
         </p>
         <p><a class="btn btn-default" href="https://www.ohio.edu/">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Internships</h2>
+    <div class="well well-sm">
+        <h2><span class="glyphicon glyphicon-briefcase"></span> Internships</h2>
         <p>I have had two internships throughout college in the summers of 2018 and 2019. My most recent internship I had the opportunity to work on a client site.</p>
         <p><a class="btn btn-default" href="https://www.infoverity.com/">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Post-Grad</h2>
+    <div class="well well-sm">
+        <h2><span class="glyphicon glyphicon-education"></span> Post-Grad</h2>
         <p>After my internship this past summer, I accepted a full time offer to continue my career there. I will be moving to Columbus after graduation.</p>
         <p><a class="btn btn-default" href="https://www.columbus.gov">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>MVC</h2>
-        <p>More about MVC</p>
-        @Html.ActionLink("Vehicle", "Index", "Vehicles")<br />
-        @Html.ActionLink("Owner", "Index", "Owners")<br />
-        @Html.ActionLink("Vehicle Details", "Index", "VehicleDetails")<br />
-        @Html.ActionLink("Seller", "Index", "Sellers")<br />
-
-    </div>
+    
 
 </div>
